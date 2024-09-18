@@ -23,9 +23,6 @@ jobs:
       - name: Run 4naly3er Action
         uses: ./.github/actions/4naly3er-action
         id: slither
-        with:
-          sarif: /tmp/report.sarif.json
-          fail-on: none
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
