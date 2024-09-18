@@ -41,24 +41,24 @@ runs:
   using: composite
 
   steps:
-    - name: Setup python
-      uses: infra/cb-action-setup-python@master
+    # - name: Setup python
+    #   uses: infra/cb-action-setup-python@master
 
-    - name: Install solc-select
-      shell: bash
-      run: |
-        pip3 install solc-select
+    # - name: Install solc-select
+    #   shell: bash
+    #   run: |
+    #     pip3 install solc-select
 
-    - name: Setup Node / Yarn
-      uses: infra/cb-action-setup-node@master
-      with:
-        version: ${{ inputs.node-version }}
+    # - name: Setup Node / Yarn
+    #   uses: infra/cb-action-setup-node@master
+    #   with:
+    #     version: ${{ inputs.node-version }}
 
-    - name: Setup foundry
-      uses: infra/cb-action-setup-external-tool@master
-      with:
-        tool_name: 'foundry'
-        version: '${{ inputs.foundry-version }}'
+    # - name: Setup foundry
+    #   uses: infra/cb-action-setup-external-tool@master
+    #   with:
+    #     tool_name: 'foundry'
+    #     version: '${{ inputs.foundry-version }}'
 
     - name: Run Slither Entrypoint Script
       shell: bash
