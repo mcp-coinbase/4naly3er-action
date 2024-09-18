@@ -10,9 +10,10 @@ on:
 jobs:
   analyze:
     runs-on:
-      - default-config
-      - small
-      - amd64
+      - ubuntu-latest
+      # - default-config
+      # - small
+      # - amd64
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
