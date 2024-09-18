@@ -38,7 +38,7 @@ runs:
     #   with:
     #     version: ${{ inputs.node-version }}
 
-    # - name: Setup foundry
+    # - name: Setup foundry 
     #   uses: infra/cb-action-setup-external-tool@master
     #   with:
     #     tool_name: 'foundry'
