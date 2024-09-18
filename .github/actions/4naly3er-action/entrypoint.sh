@@ -16,7 +16,7 @@ version_lte() {
 
 install_solc() {
     if [[ ! -f "$(which solc-select)" ]]; then
-        pip3 install solc-select      # Install solc-select if not installed
+        pip3 install solc-select       # Install solc-select if not installed
     fi
     # Check if SOLCVER is not set
     if [[ -z "$SOLCVER" ]]; then
