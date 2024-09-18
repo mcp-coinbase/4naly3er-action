@@ -41,7 +41,7 @@ runs:
     # - name: Setup foundry 
     #   uses: infra/cb-action-setup-external-tool@master
     #   with:
-    #     tool_name: 'foundry' 
+    #     tool_name: 'foundry'   d
     #     version: '${{ inputs.foundry-version }}'
 
     - name: Run 4naly3er Entrypoint Script
