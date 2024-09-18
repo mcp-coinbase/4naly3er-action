@@ -226,7 +226,7 @@ install_deps
 
 ################## Prepare inputs to the tool ##################
 ################## Save PWD of project (arg 1) ##################
-CONTRACTSPWD=$(pwd)    
+CONTRACTSPWD="$(pwd)/"
 
 
 ################## Determine Foundry/Hardhat and scoped folder (arg 2, part 1) ##################
@@ -241,7 +241,7 @@ fi
 
 ################## Generate scoping file to /tmp/scope.txt (arg 2, part 2) ##################
 if [ ! -f "$CONTRACTSPWD/scope.txt" ]; then      # We are already in $CONTRACTSPWD
-    find .| grep $PROJECTSCOPE | grep sol | grep -v typechain | grep -v node_modules | grep -v artifacts | grep -v "\.t\.sol">/tmp/scope.txt
+    find .| grep $PROJECTSCOPE | grep "\.sol" | grep -v "\./lib/" | grep -v typechain | grep -v node_modules | grep -v artifacts | grep -v "\.t\.sol">/tmp/scope.txt
 else
     cp $CONTRACTSPWD/scope.txt /tmp/scope.txt
 fi
