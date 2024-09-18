@@ -44,19 +44,15 @@ runs:
     #     tool_name: 'foundry'
     #     version: '${{ inputs.foundry-version }}'
 
-    - name: Run Slither Entrypoint Script
+    - name: Run 4naly3er Entrypoint Script
       shell: bash
       run: |
-        ./.github/actions/slither-action/entrypoint.sh
+        ./.github/actions/4naly3er-action/entrypoint.sh
       env:
         TARGET: ${{ inputs.target }}
         SOLCVER: ${{ inputs.solc_version }}
         NODEVER: ${{ inputs.node-version }}
         SARIFOUT: ${{ inputs.sarif }}
-        SLITHERVER: ${{ inputs.slither-version }}
-        SLITHERARGS: ${{ inputs.slither-args }}
-        SLITHERCONF: ${{ inputs.slither-config }}
-        SLITHERPLUGINS: ${{ inputs.slither-plugins }}
         STDOUTFILE: "/tmp/slither-stdout"
         IGNORECOMPILE: ${{ inputs.ignore-compile }}
         FAIL_ON_LEVEL: ${{ inputs.fail-on }}
