@@ -30,7 +30,7 @@ jobs:
           sarif_file: /tmp/report.sarif.json
             
 
-# Set GH_TOKEN permissions to be as restricted as possible 
+# Set GH_TOKEN permissions to be as restricted as possible
 # security-events must be set to write for the SARIF upload step
 permissions:
   security-events: write
