@@ -15,7 +15,7 @@ version_lte() {
 }
 
 install_solc() {
-    if [[! -f "$(which solc-select)" ]]; then
+    if [[ ! -f "$(which solc-select)" ]]; then
         pip3 install solc-select      # Install solc-select if not installed
     fi
     # Check if SOLCVER is not set
@@ -240,7 +240,7 @@ fi
 
 
 ################## Generate scoping file to /tmp/scope.txt (arg 2, part 2) ##################
-if [! -f "$CONTRACTSPWD/scope.txt" ]; then      # We are already in $CONTRACTSPWD
+if [ ! -f "$CONTRACTSPWD/scope.txt" ]; then      # We are already in $CONTRACTSPWD
     find .| grep $PROJECTSCOPE | grep sol | grep -v typechain | grep -v node_modules | grep -v artifacts | grep -v "\.t\.sol">/tmp/scope.txt
 else
     cp $CONTRACTSPWD/scope.txt /tmp/scope.txt
