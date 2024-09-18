@@ -262,7 +262,7 @@ cat /tmp/scope.txt
 
 
 ################## Run the tool ##################
-trap "output_stdout" EXIT # Set a trap to call the output_stdout function when the script exits
+# trap "output_stdout" EXIT # Set a trap to call the output_stdout function when the script exits
 cd $TOOLPWD             # Move to 4naly3er folder (required to run it)
 yarn analyze $CONTRACTSPWD /tmp/scope.txt $PROJECTURL # Finally, run the tool
 exit 0 # Exit success
