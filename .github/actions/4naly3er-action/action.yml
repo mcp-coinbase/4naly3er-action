@@ -40,7 +40,7 @@ runs:
 
     # - name: Setup foundry 
     #   uses: infra/cb-action-setup-external-tool@master
-    #   with: 
+    #   with:  
     #     tool_name: 'foundry'   
     #     version: '${{ inputs.foundry-version }}'
 
