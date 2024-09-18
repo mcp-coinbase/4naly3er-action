@@ -268,4 +268,6 @@ cd $TOOLPWD             # Move to 4naly3er folder (required to run it)
 yarn analyze $CONTRACTSPWD /tmp/scope.txt $PROJECTURL # Finally, run the tool
 echo "4naly3er analysis completed." # Results in report.md and report.sarif.json
 cp report.md report.sarif.json /tmp/ # Copy results to /tmp/ for SARIF ingestion
+echo "Here is the report in Markdown format:"
+cat report.md # Echo the report
 exit 0 # Exit success
