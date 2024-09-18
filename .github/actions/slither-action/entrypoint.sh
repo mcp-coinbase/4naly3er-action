@@ -124,7 +124,7 @@ install_foundry() {
 
 install_4naly3er() {
     # Download the forked repo and CD in
-    git clone https://github.cbhq.net/matthew-pilsbury/4naly3er
+    git clone https://github.com/AnalyticETH/4naly3er
     cd 4naly3er
     # Install deps using Yarn
     yarn
