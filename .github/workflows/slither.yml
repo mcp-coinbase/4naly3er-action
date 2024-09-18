@@ -1,4 +1,4 @@
-name: Slither Analysis
+name: 4naly3er Analysis
 # Config File for CBHQ Github Repos
 on:
   # Only run this action on pushes / pull requests to main branch
@@ -20,8 +20,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Run Slither Action
-        uses: ./.github/actions/slither-action
+      - name: Run 4naly3er Action
+        uses: ./.github/actions/4naly3er-action
         id: slither
         with:
           sarif: /tmp/report.sarif.json
