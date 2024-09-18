@@ -249,7 +249,7 @@ fi
 
 ################## Saving github url (arg 3) ##################
 URLPREFIX="https://github.com/"
-PROJECTURL= "$URLPREFIX$GITHUB_REPOSITORY/"
+PROJECTURL="$URLPREFIX$GITHUB_REPOSITORY/"
 
 
 ###### TESTING #####
