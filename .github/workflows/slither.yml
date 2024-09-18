@@ -24,13 +24,13 @@ jobs:
         uses: ./.github/actions/slither-action
         id: slither
         with:
-          sarif: results.sarif
+          sarif: /tmp/report.sarif.json
           fail-on: none
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: results.sarif
+          sarif_file: /tmp/report.sarif.json
             
 
 # Set GH_TOKEN permissions to be as restricted as possible

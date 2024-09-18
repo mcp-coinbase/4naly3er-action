@@ -252,17 +252,20 @@ URLPREFIX="https://github.com/"
 PROJECTURL="$URLPREFIX$GITHUB_REPOSITORY/"
 
 
-###### TESTING #####
-echo "PROJECTSCOPE is $PROJECTSCOPE"
-echo "CONTRACTSPWD is $CONTRACTSPWD"
-echo "PROJECTURL is $PROJECTURL"
-echo "cat /tmp/scope.txt"
+###### Echo the parameters passed to the tool for debugging #####
+echo "################ START DEBUGGING INFORMATION ################"
+echo "Contracts' PWD is '$CONTRACTSPWD'"
+echo "Project Type is '$PROJECTSCOPE'. ('src' = Foundry | 'contracts' = Hardhat)"
+echo "Project URL is '$PROJECTURL'"
+echo "Contents of our scope.txt file:"
 cat /tmp/scope.txt
-###### TESTING #####
+echo "################ END DEBUGGING INFORMATION ################"
 
 
 ################## Run the tool ##################
 # trap "output_stdout" EXIT # Set a trap to call the output_stdout function when the script exits
 cd $TOOLPWD             # Move to 4naly3er folder (required to run it)
 yarn analyze $CONTRACTSPWD /tmp/scope.txt $PROJECTURL # Finally, run the tool
+echo "4naly3er analysis completed." # Results in report.md and report.sarif.json
+cp report.md report.sarif.json /tmp/ # Copy results to /tmp/ for SARIF ingestion
 exit 0 # Exit success
