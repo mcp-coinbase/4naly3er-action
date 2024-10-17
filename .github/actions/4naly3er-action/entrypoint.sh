@@ -225,6 +225,12 @@ install_deps
 
 
 ################## Prepare inputs to the tool ##################
+################## Generate remapping document #################
+if [[ ! -f remappings.txt ]]; then    # If we don't have a remappings
+    forge remappings > remappings.txt # file, then we generate one.
+fi
+
+
 ################## Save PWD of project (arg 1) ##################
 CONTRACTSPWD="$(pwd)/"
 
